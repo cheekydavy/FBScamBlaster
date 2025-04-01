@@ -1,18 +1,9 @@
 # fbscamblaster_core.py
 import requests
 from fake_useragent import UserAgent
-from stem import Signal
-from stem.control import Controller
 import time
 import random
 import re
-
-def renew_tor_ip():
-    """Rotate Tor IP for stealth."""
-    with Controller.from_port(port=9051) as controller:
-        controller.authenticate()
-        controller.signal(Signal.NEWNYM)
-    time.sleep(5)
 
 def get_headers():
     """Generate fake headers to mimic a real user."""
@@ -36,7 +27,6 @@ def report_profile(profile_url, report_count, output_callback):
         return
 
     session = requests.Session()
-    session.proxies = {'http': 'socks5h://127.0.0.1:9050', 'https': 'socks5h://127.0.0.1:9050'}
     report_url = "https://www.facebook.com/ajax/report.php"  # Sniff the real endpoint
     reasons = ["Scam", "Fake account", "Spam", "Fraud"]
 
@@ -55,8 +45,6 @@ def report_profile(profile_url, report_count, output_callback):
         except Exception as e:
             output_callback(f"[CHEEKY] Shit broke: {e}")
         
-        if i % 5 == 0:
-            renew_tor_ip()
         time.sleep(random.uniform(1, 3))
 
     output_callback(f"[CHEEKY] Target {profile_url} hit hard. Job done, you savage fuck.")
