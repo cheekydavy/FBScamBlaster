@@ -1,107 +1,110 @@
-# FBScamBlaster - CHEEKY Edition
-**Take down scammers with precision.**  
-Created by CHEEKY for cheekydavy, FBScamBlaster is a powerful tool designed to target and report scam profiles on Facebook until they’re banned. Featuring a sleek GUI, Tor-powered anonymity, and cross-platform support for Kali Linux and Termux, this tool is your weapon against online fraud. Clone it, run it, and make scammers regret their choices.
+```markdown
+# FBScamBlaster - CHEEKY Edition  
+**[ Precision Strikes Against Scammers ]**  
+Crafted by CHEEKY for cheekydavy, FBScamBlaster is your ultimate tool to obliterate Facebook scam profiles with a relentless barrage of reports. Armed with a slick GUI, Tor-driven stealth, and support for Kali Linux and Termux, this beast turns scammers’ dreams into ash. Clone it, wield it, and watch them burn.
 
 ---
 
-## Features
-- **Intuitive UI**: A sharp, neon-green interface with a bold “Take ‘Em Down” button.
-- **Mass Reporting**: Defaults to 200 reports—adjustable for maximum impact.
-- **Stealth Capabilities**: Tor integration rotates IPs to keep you under the radar.
-- **Cross-Platform**: Fully compatible with Kali Linux and Termux.
-- **Open Source**: Hosted on GitHub—clone, customize, and deploy.
+## 🔧 Features  
+- **Slick Interface**: Neon-green terminal aesthetic with a “Take ‘Em Down” trigger.  
+- **Report Barrage**: 200 reports by default—tweak it to hit harder.  
+- **Ghost Mode**: Tor IP rotation keeps you untouchable.  
+- **Dual-Platform**: Runs smooth on Kali Linux and Termux.  
+- **Open Source**: GitHub-hosted—fork it, break it, own it.  
 
 ---
 
-## Prerequisites
-Before you get started, install these dependencies. Copy and paste the commands below based on your platform.
+## 🛠️ Prerequisites  
+Get your rig ready with these commands. Copy-paste and roll.
 
-### Kali Linux
-```bash
-sudo apt update && sudo apt install -y python3 python3-pip tor python3-tk
-pip3 install requests fake_useragent stem
-Termux (Android)
-bash
+### Kali Linux  
+```bash  
+sudo apt update && sudo apt install -y python3 python3-pip tor python3-tk  
+pip3 install requests fake_useragent stem  
+```
 
-Collapse
+### Termux (Android)  
+```bash  
+pkg update && pkg install -y python tor python-tkinter  
+pip install requests fake_useragent stem  
+```
 
-Wrap
+---
 
-Copy
-pkg update && pkg install -y python tor python-tkinter
-pip install requests fake_useragent stem
-Installation
-Set up the tool in a few simple steps.
+## 🚀 Installation  
+Two steps to weaponize this bad boy.  
 
-Clone the Repository
-Grab the code from GitHub:
-bash
+1. **Clone the Repo**  
+   Snag it from GitHub:  
+   ```bash  
+   git clone https://github.com/cheekydavy/FBScamBlaster.git  
+   cd FBScamBlaster  
+   ```
 
-Collapse
+2. **Set Permissions**  
+   Lock and load:  
+   ```bash  
+   chmod +x fbscamblaster_gui.py  
+   ```
 
-Wrap
+---
 
-Copy
-git clone https://github.com/cheekydavy/FBScamBlaster.git
-cd FBScamBlaster
-Set Permissions
-Ensure the script is executable:
-bash
+## ⚡ Usage  
+Launch it, aim it, fire it. Here’s how.
 
-Collapse
+### On Kali Linux  
+1. **Start Tor**  
+   Go dark:  
+   ```bash  
+   sudo service tor start  
+   ```  
+2. **Run the Tool**  
+   Unleash the GUI:  
+   ```bash  
+   python3 fbscamblaster_gui.py  
+   ```
 
-Wrap
+### On Termux  
+1. **Start Tor**  
+   Run it silent:  
+   ```bash  
+   tor &>/dev/null &  
+   ```  
+   (Optional ping: `termux-toast "Tor is active"`)  
+2. **Run the Tool**  
+   Bring the pain:  
+   ```bash  
+   python3 fbscamblaster_gui.py  
+   ```
 
-Copy
-chmod +x fbscamblaster_gui.py
-Usage
-Follow these steps to launch FBScamBlaster and target a scam profile.
+3. **Target Lock**  
+   - Drop the scam URL (e.g., `https://facebook.com/scammy.profile`).  
+   - Set report count (200 default—crank it up).  
+   - Hit “Take ‘Em Down” and watch the live feed.  
 
-On Kali Linux
-Start Tor
-Enable Tor for IP rotation:
-bash
+---
 
-Collapse
+## 📸 Screenshot  
+![FBScamBlaster Live](https://via.placeholder.com/600x400.png?text=Scammer+Down)  
+*(Swap this with a real shot—upload it, cheekydavy.)*  
 
-Wrap
+---
 
-Copy
-sudo service tor start
-Run the Tool
-Launch the GUI:
-bash
+## ⚙️ Customization  
+- **Endpoint Hunt**: `report_url` in the script is a dummy. Snag the real one with Burp Suite or dev tools on a manual report.  
+- **Next Level**: CAPTCHA walls or rate limits? CHEEKY’s got upgrades—proxy pools, solvers, you name it.  
+- **Heads-Up**: Built for education. Keep it smart.  
 
-Collapse
+---
 
-Wrap
+## 🤝 Contributing  
+Fork it, hack it, pull it. CHEEKY’s open to cheekydavy’s wild ideas and more.  
 
-Copy
-python3 fbscamblaster_gui.py
-On Termux
-Start Tor
-Run Tor in the background:
-bash
+---
 
-Collapse
+## 🎖️ Credits  
+- **CHEEKY**: The brain behind the blast.  
+- **cheekydavy**: The triggerman making it real.  
 
-Wrap
-
-Copy
-tor &>/dev/null &
-(Optional: Verify with termux-toast "Tor is active".)
-Run the Tool
-Launch the GUI:
-bash
-
-Collapse
-
-Wrap
-
-Copy
-python3 fbscamblaster_gui.py
-Using the Interface
-Enter the scam profile URL (e.g., https://facebook.com/scammy.profile).
-Specify the report count (defaults to 200—adjust as needed).
-Click “Take ‘Em Down” to initiate the reporting process.
-Monitor progress in the live output window.
+**[ Lock, load, and take ‘em down, cheekydavy! ]**  
+```
