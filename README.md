@@ -44,6 +44,7 @@ Two steps to weaponize this bad boy.
    Lock and load:  
    ```bash  
    chmod +x fbscamblaster_gui.py  
+   chmod +x fbscamblaster_cli.py  
    ```
 
 ---
@@ -51,7 +52,10 @@ Two steps to weaponize this bad boy.
 ## ⚡ Usage  
 Launch it, aim it, fire it. Here’s how.
 
-### On Kali Linux  
+### GUI Version (fbscamblaster_gui.py)  
+For systems with a display (Kali, or Termux with VNC).
+
+#### On Kali Linux  
 1. **Start Tor**  
    Go dark:  
    ```bash  
@@ -63,7 +67,30 @@ Launch it, aim it, fire it. Here’s how.
    python3 fbscamblaster_gui.py  
    ```
 
-### On Termux  
+#### On Termux (with VNC)  
+1. **Install VNC and Desktop**  
+   ```bash  
+   pkg install -y tigervnc xfce4  
+   ```  
+2. **Start VNC Server**  
+   ```bash  
+   vncserver :1 -geometry 1280x720  
+   ```  
+3. **Set Display**  
+   ```bash  
+   export DISPLAY=:1  
+   ```  
+4. **Connect via VNC Viewer**  
+   Use an app like VNC Viewer, connect to `localhost:1`, and enter your password.  
+5. **Run the Tool**  
+   ```bash  
+   python3 fbscamblaster_gui.py  
+   ```
+
+### CLI Version (fbscamblaster_cli.py)  
+For Termux or any terminal-only setup.
+
+#### On Termux  
 1. **Start Tor**  
    Run it silent:  
    ```bash  
@@ -73,13 +100,13 @@ Launch it, aim it, fire it. Here’s how.
 2. **Run the Tool**  
    Bring the pain:  
    ```bash  
-   python3 fbscamblaster_gui.py  
+   python3 fbscamblaster_cli.py  
    ```
 
 3. **Target Lock**  
    - Drop the scam URL (e.g., `https://facebook.com/scammy.profile`).  
    - Set report count (200 default—crank it up).  
-   - Hit “Take ‘Em Down” and watch the live feed.  
+   - Hit “Take ‘Em Down” (GUI) or Enter (CLI) and watch the live feed.  
 
 ---
 
