@@ -1,4 +1,3 @@
-##markdown
 # FBScamBlaster - CHEEKY Edition  
 **[ Precision Strikes Against Scammers ]**  
 Crafted by CHEEKY for cheekydavy, FBScamBlaster is your ultimate tool to obliterate Facebook scam profiles with a relentless barrage of reports. Armed with a slick GUI, Tor-driven stealth, and support for Kali Linux and Termux, this beast turns scammers’ dreams into ash. Clone it, wield it, and watch them burn.
