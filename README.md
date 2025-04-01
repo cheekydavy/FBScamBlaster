@@ -13,5 +13,5 @@ Created by CHEEKY for cheekydavy, FBScamBlaster is a powerful tool designed to t
 
 ---
 ##Termux
-pkg update && pkg install -y python tor python-tkinter
-pip install requests fake_useragent stem
+-pkg update && pkg install -y python tor python-tkinter
+-pip install requests fake_useragent stem
