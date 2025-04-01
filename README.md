@@ -12,11 +12,6 @@ Created by CHEEKY for cheekydavy, FBScamBlaster is a powerful tool designed to t
 - **Open Source**: Hosted on GitHub—clone, customize, and deploy.
 
 ---
-
-## Prerequisites
-Before you get started, install these dependencies. Copy and paste the commands below based on your platform.
-
-### Kali Linux
-```bash
-sudo apt update && sudo apt install -y python3 python3-pip tor python3-tk
-pip3 install requests fake_useragent stem
+##Termux
+pkg update && pkg install -y python tor python-tkinter
+pip install requests fake_useragent stem
